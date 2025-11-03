@@ -1,0 +1,223 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/Windmill.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/SmallManor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/manhole/protos/SquareManhole.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/tesla/TeslaModel3Simple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Forest.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/dji/mavic/protos/Mavic2Pro.proto"
+
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+}
+Viewpoint {
+  orientation -0.15282762720657897 -0.04320960604616074 0.9873077768901359 3.5840595452447395
+  position 2.4590585097903794 1.9665617599795455 4.165357854348742
+  near 0.2
+  follow "Mavic 2 PRO"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 400 400
+  tileSize 6 6
+  appearance SandyGround {
+  }
+}
+Road {
+  translation -43.8 9.2 0.01
+  rotation 0 0 1 -0.3926996938995747
+  width 3
+  numberOfLanes 1
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    100 0 0
+    200 200 0
+  ]
+  splineSubdivision 8
+  appearance Pavement {
+    type "black stone"
+  }
+}
+Windmill {
+  translation -43.8656 -19.8433 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+}
+Windmill {
+  translation -44.258 -27.3356 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(1)"
+}
+Windmill {
+  translation -46.2448 30.573 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(2)"
+}
+Windmill {
+  translation -38.75 23.4 0
+  name "windmill(3)"
+}
+SmallManor {
+  translation -50.35 11.25 0
+  rotation 0 0 -1 0.392394
+}
+SquareManhole {
+  translation 0 0 -0.03
+}
+CardboardBox {
+  translation -0.730157 -1.22891 0.3
+  rotation 0 0 1 -1.8325953071795862
+}
+TeslaModel3Simple {
+  translation -41.5139 4.34169 0.31
+  rotation 0 0 1 -0.2618053071795865
+}
+Pine {
+  translation -14.0083 -14.4828 0
+  rotation 0 0 1 2.61799
+}
+Pine {
+  translation -19.6195 -24.3783 0
+  rotation 0 0 1 2.87979
+  name "pine tree(1)"
+}
+Pine {
+  translation -22.0129 6.20205 0
+  name "pine tree(3)"
+}
+Pine {
+  translation -10.6926 -25.1339 0
+  name "pine tree(4)"
+}
+Pine {
+  translation -14.3441 14.5621 0
+  name "pine tree(5)"
+}
+Pine {
+  translation -26.6328 -7.1707 0
+  name "pine tree(6)"
+}
+Pine {
+  translation -9.37029 14.0209 0
+  rotation 0 0 1 -2.6179953071795863
+  name "pine tree(2)"
+}
+Forest {
+  translation 0 0 -0.01
+  shape [
+    200 200
+    200 0
+    50 0
+    50 50
+    -50 50
+    -50 -50
+    50 -50
+    50 0
+    200 0
+    200 -200
+    -200 -200
+    -200 200
+  ]
+  density 0.01
+  type "cherry tree"
+  randomSeed 1
+  maxHeight 12
+  minHeight 6
+  maxRadius 6
+  minRadius 3
+}
+Mavic2Pro {
+  hidden position_0_0 -2.7433554687117747e-11
+  hidden linearVelocity_0 -1.102836699866983e-06 -5.738042191997711e-07 5.032388476535754e-16
+  hidden angularVelocity_0 1.786221797559661e-15 -1.5326882934774389e-15 -4.652074653223128e-06
+  hidden position_5_0 -1.4711466108253274e-08
+  hidden linearVelocity_5 -7.588205519166895e-07 -9.326243022649411e-08 6.233265212312514e-16
+  hidden angularVelocity_5 1.640330239566903e-14 -1.1357810897243843e-14 -4.652074654938192e-06
+  hidden position_6_0 7.436545289668432e-10
+  hidden linearVelocity_6 -7.439389358503496e-07 -1.1672598679706382e-07 2.898659416444584e-16
+  hidden angularVelocity_6 1.984424165957664e-15 -5.4917374236851014e-15 -4.652074657516692e-06
+  hidden linearVelocity_7 -7.105956293380325e-07 -1.3890859471561343e-07 4.495625384062512e-16
+  hidden angularVelocity_7 4.6746279003870195e-15 -8.24258649234765e-15 -4.652074659064393e-06
+  translation 0.7276993698267816 -0.1115290661051275 0.01682400748813953
+  rotation -0.33723480766283365 -0.9412844321115093 0.016009446121750422 3.1286665940549594
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
+Mavic2Pro {
+  hidden position_0_0 -1.5273056150409452e-11
+  hidden linearVelocity_0 -0.06917810436529365 0.022473590459768378 -0.0028137208808883983
+  hidden angularVelocity_0 -2.2880647151155666e-07 -7.278674876923752e-07 0.0001519257214078637
+  hidden position_5_0 -1.1449006051891808e-07
+  hidden linearVelocity_5 -0.06918053630253032 0.022454442074915378 -0.0028138163998765297
+  hidden angularVelocity_5 -2.2873875834389272e-07 -7.278892489653147e-07 0.00015191199978160157
+  hidden rotation_6 0 -1 0 1.1542389828584842e-07
+  hidden position_6_0 6.063841139175401e-08
+  hidden linearVelocity_6 -0.06917967850775907 0.022454672490702106 -0.0028138135967565267
+  hidden angularVelocity_6 -2.413548455589893e-07 -9.237158743709862e-07 0.0001519122496728361
+  hidden rotation_7 0.9999999999999999 0 0 5.960464477539063e-08
+  hidden linearVelocity_7 -0.06917842326747627 0.02245446266827735 -0.0028138129171248884
+  hidden angularVelocity_7 -2.99031643114183e-07 -9.199997911467982e-07 0.00015191196084501858
+  translation -0.689878224782132 0.9550353588825652 0.9934461113945068
+  rotation -0.0024782136553997166 0.0007171221824433048 0.9999966720908894 3.07725603511604
+  name "Mavic 2 PRO(1)"
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
+Mavic2Pro {
+  hidden position_0_0 -1.5294897431292937e-11
+  hidden linearVelocity_0 -0.07124977727397672 -0.014632378167551688 -0.0025558394265650887
+  hidden angularVelocity_0 1.4847196452493123e-07 -6.824893073489328e-07 0.00016426891138789164
+  hidden position_5_0 -1.09757050271303e-07
+  hidden linearVelocity_5 -0.07124183065301683 -0.014651677017858748 -0.002555926897827605
+  hidden angularVelocity_5 1.485415583466589e-07 -6.824747913409244e-07 0.00016425518976718247
+  hidden rotation_6 0 -1 0 1.1151007970493858e-07
+  hidden position_6_0 7.024261060545149e-08
+  hidden linearVelocity_6 -0.07124114796659793 -0.014651002241161476 -0.0025559242991867524
+  hidden angularVelocity_6 2.340518594120053e-07 -8.583803470501526e-07 0.00016425543884051425
+  hidden rotation_7 1 0 0 7.300048299977715e-08
+  hidden linearVelocity_7 -0.07123985710316597 -0.014650529130175624 -0.00255592370178579
+  hidden angularVelocity_7 1.8737552962690037e-07 -8.810701512583717e-07 0.0001642551794855106
+  translation -0.5334632574117397 -0.7782795573026635 0.9933763405056919
+  rotation -0.00264527087186002 6.156625681981041e-05 0.9999964993696779 -2.689116843216751
+  name "Mavic 2 PRO(2)"
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
