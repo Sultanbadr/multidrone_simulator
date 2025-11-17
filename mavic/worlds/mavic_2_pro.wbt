@@ -1,0 +1,361 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/Windmill.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/SmallManor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/manhole/protos/SquareManhole.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/tesla/TeslaModel3Simple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Forest.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/dji/mavic/protos/Mavic2Pro.proto"
+
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+}
+Viewpoint {
+  orientation -0.048800987439134795 0.9977982104182405 0.04491319306308584 0.4114687951898377
+  position -9.949171679485328 -0.8122164214322541 4.474227248221367
+  near 0.2
+  follow "Mavic 2 PRO"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 400 400
+  tileSize 6 6
+  appearance SandyGround {
+  }
+}
+Road {
+  translation -43.8 9.2 0.01
+  rotation 0 0 1 -0.3926996938995747
+  width 3
+  numberOfLanes 1
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    100 0 0
+    200 200 0
+  ]
+  splineSubdivision 8
+  appearance Pavement {
+    type "black stone"
+  }
+}
+Windmill {
+  translation -43.8656 -19.8433 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+}
+Windmill {
+  translation -44.258 -27.3356 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(1)"
+}
+Windmill {
+  translation -46.2448 30.573 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(2)"
+}
+Windmill {
+  translation -38.75 23.4 0
+  name "windmill(3)"
+}
+SmallManor {
+  translation -50.35 11.25 0
+  rotation 0 0 -1 0.392394
+}
+SquareManhole {
+  translation 0 0 -0.03
+}
+CardboardBox {
+  translation -0.730157 -1.22891 0.3
+  rotation 0 0 1 -1.8325953071795862
+}
+TeslaModel3Simple {
+  translation -41.5139 4.34169 0.31
+  rotation 0 0 1 -0.2618053071795865
+}
+Pine {
+  translation -14.0083 -14.4828 0
+  rotation 0 0 1 2.61799
+}
+Pine {
+  translation -19.6195 -24.3783 0
+  rotation 0 0 1 2.87979
+  name "pine tree(1)"
+}
+Pine {
+  translation -22.0129 6.20205 0
+  name "pine tree(3)"
+}
+Pine {
+  translation -10.6926 -25.1339 0
+  name "pine tree(4)"
+}
+Pine {
+  translation -14.3441 14.5621 0
+  name "pine tree(5)"
+}
+Pine {
+  translation -26.6328 -7.1707 0
+  name "pine tree(6)"
+}
+Pine {
+  translation -9.37029 14.0209 0
+  rotation 0 0 1 -2.6179953071795863
+  name "pine tree(2)"
+}
+Forest {
+  translation 0 0 -0.01
+  shape [
+    200 200
+    200 0
+    50 0
+    50 50
+    -50 50
+    -50 -50
+    50 -50
+    50 0
+    200 0
+    200 -200
+    -200 -200
+    -200 200
+  ]
+  density 0.01
+  type "cherry tree"
+  randomSeed 1
+  maxHeight 12
+  minHeight 6
+  maxRadius 6
+  minRadius 3
+}
+Mavic2Pro {
+  hidden position_0_0 1.5534635922774388e-08
+  hidden linearVelocity_0 8.372532758923126e-06 -1.1775355750379955e-05 0.00013274075690533833
+  hidden angularVelocity_0 0.0005258632971273478 0.0002960961963003168 2.6169207488080804e-05
+  hidden translation_10 0.0412774 -0.00469654 -0.00405862
+  hidden rotation_10 0 0 1 0
+  hidden position_10_0 0.005800024983371815
+  hidden linearVelocity_10 1.8599963605048536e-05 -3.0717854389597934e-05 0.00019192534516246506
+  hidden angularVelocity_10 0.0005258630900026499 0.0002960955958873247 2.6177283804320438e-05
+  hidden translation_11 0.000625212 -0.00530346 -0.0207448
+  hidden rotation_11 0 1 0 0.005800024983372844
+  hidden position_11_0 8.52366277617566e-06
+  hidden linearVelocity_11 1.767750618902442e-05 -2.6869896343103815e-05 0.00019068089394971334
+  hidden angularVelocity_11 0.0005258556055099523 0.00029608014991452334 2.617616136996298e-05
+  hidden translation_12 0.00754686 0.0160388 -0.00586401
+  hidden rotation_12 1 0 0 8.52367260818834e-06
+  hidden linearVelocity_12 1.599944415369869e-05 -2.0531830883199575e-05 0.000191039254404129
+  hidden angularVelocity_12 0.0005258446949385707 0.00029608541536902696 2.6176177756298326e-05
+  translation -0.4142012338271187 0.06076401023402382 0.07917561005038512
+  rotation -0.004373225654777236 -0.034493916528245815 0.9993953395027989 2.6917924137357523
+  controller "drone1"
+  bodySlot [
+    DistanceSensor {
+      translation 0 0 0.05
+      rotation 0 1 0 0
+      name "ds_front"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      translation 0 0 -0.05
+      rotation 0 1 0 3.14159
+      name "ds_back"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      translation -0.05 0 0
+      rotation 0 1 0 1.5708
+      name "ds_left"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      translation 0.05 0 0
+      rotation 0 1 0 -1.5708
+      name "ds_right"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    Emitter {
+      channel 1
+      bufferSize 10
+    }
+  ]
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
+Mavic2Pro {
+  hidden position_0_0 5.389898808091382e-09
+  hidden linearVelocity_0 -2.423787753749431e-07 7.704521503454679e-08 6.343074169738552e-06
+  hidden angularVelocity_0 -4.066211993081059e-06 -1.2737889293646111e-05 -1.1933903037299088e-08
+  hidden translation_10 0.0412774 -0.00469654 -0.00405862
+  hidden rotation_10 0 0 1 0
+  hidden position_10_0 0.004017254060366193
+  hidden linearVelocity_10 -6.252859853352486e-07 2.008442127796037e-07 4.670725039217009e-06
+  hidden angularVelocity_10 -4.066945584399229e-06 -1.2737665766784955e-05 -2.2944654827805243e-08
+  hidden translation_11 0.000625212 -0.00530346 -0.0207448
+  hidden rotation_11 0 1 0 0.004017254060321524
+  hidden position_11_0 -0.0002524428433587164
+  hidden linearVelocity_11 -5.623337459711709e-07 1.8070600522350166e-07 4.691468738522524e-06
+  hidden angularVelocity_11 -4.07241220142405e-06 -1.2755606078127907e-05 -2.2944668911179038e-08
+  hidden translation_12 0.00754686 0.0160388 -0.00586401
+  hidden rotation_12 -1 0 0 0.00025244284260803935
+  hidden linearVelocity_12 -4.526825078082917e-07 1.457427165491361e-07 4.67329431667744e-06
+  hidden angularVelocity_12 -4.0611613703421975e-06 -1.2759035674212647e-05 -2.371881145204775e-08
+  translation -3.9039918469943573 1.7245058520398198 0.06570957312814212
+  rotation 0.03486247108762181 -0.005198006472204602 0.9993786013510493 2.84572036517867
+  name "Mavic 2 PRO(1)"
+  controller "drone2"
+  bodySlot [
+    DistanceSensor {
+      rotation 0 1 0 0
+      name "ds_front"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      rotation 0 1 0 3.14159
+      name "ds_back"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      rotation 0 1 0 1.5708
+      name "ds_left"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      rotation 0 1 0 -1.5708
+      name "ds_right"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    Receiver {
+      channel 1
+      bufferSize 10
+    }
+  ]
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
+Mavic2Pro {
+  hidden position_0_0 1.8757303200275868e-09
+  hidden linearVelocity_0 -2.4888165023851e-07 5.2357349529275524e-08 6.3430744047010885e-06
+  hidden angularVelocity_0 -2.7686891904435435e-06 -1.3081370528756425e-05 -1.1933893645446513e-08
+  hidden translation_10 0.0412774 -0.00469654 -0.00405862
+  hidden rotation_10 0 0 1 0
+  hidden position_10_0 0.07749452052904096
+  hidden linearVelocity_10 -6.422715263066444e-07 1.3714434922843544e-07 4.6707253928857625e-06
+  hidden angularVelocity_10 -2.7694378367107197e-06 -1.3081222316390031e-05 -2.2891412682155663e-08
+  hidden translation_11 0.000625212 -0.00530346 -0.0207448
+  hidden rotation_11 0 1 0 0.07749452052903934
+  hidden position_11_0 0.0003625161907420496
+  hidden linearVelocity_11 -5.799417531875805e-07 1.2391559327844468e-07 4.689576773816029e-06
+  hidden angularVelocity_11 -2.7608133884461714e-06 -1.303772764791196e-05 -2.2891500231323394e-08
+  hidden translation_12 0.00754686 0.0160388 -0.00586401
+  hidden rotation_12 1 0 0 0.0003625161911574211
+  hidden linearVelocity_12 -4.667941692613163e-07 9.99604666034611e-08 4.679968194176351e-06
+  hidden angularVelocity_12 -2.7724919634667087e-06 -1.3035411312722606e-05 -2.298382652075899e-08
+  translation -3.3090718995692265 2.8229119486370586 0.06570957794447162
+  rotation 0.03486277605839254 -0.0034204270948053634 0.9993862554207914 2.9460820113855672
+  name "Mavic 2 PRO(2)"
+  controller "drone3"
+  controllerArgs [
+    ""
+  ]
+  bodySlot [
+    DistanceSensor {
+      rotation 0 1 0 -1.5708
+      name "ds_right"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      rotation 0 1 0 1.5708
+      name "ds_left"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      rotation 0 1 0 3.14159
+      name "ds_back"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    DistanceSensor {
+      rotation 0 1 0 0
+      name "ds_front"
+      lookupTable [
+        0 0 0
+        3 3 0
+      ]
+    }
+    Receiver {
+      channel 1
+      bufferSize 10
+    }
+  ]
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
